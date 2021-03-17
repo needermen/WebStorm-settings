@@ -134,4 +134,13 @@
       <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="a-module-feature-list" value="const externalModules = [];&#10;const internalUIModules = [];&#10;const internalModules = [];&#10;const components = [$name$ListComponent]&#10;&#10;@NgModule({&#10;  declarations: [&#10;    ...components&#10;  ],&#10;  imports: [&#10;    SharedModule,&#10;    $name$RoutingModule,&#10;&#10;    ...internalModules,&#10;    ...internalUIModules,&#10;    ...externalModules&#10;  ],&#10;  providers: [$name$sFacade, $name$MapperService, DataServiceProviderApiIsNotAvailableYet]&#10;})&#10;export class $name$sModule {&#10;}" description="angular feature module with routing" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+      <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+      <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
