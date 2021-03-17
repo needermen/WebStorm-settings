@@ -1,0 +1,105 @@
+<templateSet group="user">
+  <template name="a-change-detection-on-push" value="changeDetection: ChangeDetectionStrategy.OnPush" description="Angular-enable-onpush-change-detection" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_CLASS" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+      <option name="JS_TOP_LEVEL_STATEMENT" value="false" />
+      <option name="TS_CLASS" value="false" />
+      <option name="TS_EXPRESSION" value="false" />
+      <option name="TS_STATEMENT" value="false" />
+      <option name="TS_TOP_LEVEL_STATEMENT" value="false" />
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="a-module-feature-routing" value="const externalModules = [];&#10;const internalUIModules = [];&#10;const internalModules = [];&#10;const components = [$name$Component]&#10;&#10;@NgModule({&#10;  declarations: [&#10;    ...components&#10;  ],&#10;  imports: [&#10;    SharedModule,&#10;    $name$RoutingModule,&#10;&#10;    ...internalModules,&#10;    ...internalUIModules,&#10;    ...externalModules&#10;  ],&#10;  providers: []&#10;})&#10;export class $name$Module {&#10;}" description="angular feature module with routing" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+      <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+      <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="a-module-feature" value="const externalModules = [];&#10;const internalUIModules = [];&#10;const internalModules = [];&#10;const components = [$name$Component]&#10;&#10;@NgModule({&#10;  declarations: [&#10;    ...components&#10;  ],&#10;  imports: [&#10;    SharedModule,&#10;&#10;    ...internalModules,&#10;    ...internalUIModules,&#10;    ...externalModules&#10;  ],&#10;  exports: [&#10;    ...components&#10;  ],&#10;  providers: []&#10;})&#10;export class $name$Module {&#10;}" description="angular feature module" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+      <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+      <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="a-routing-import-lazy" value="{&#10;    path: $featureName$MainRoute,&#10;    loadChildren: () =&gt;&#10;      import('./accounts/$filePath$.module').then((f) =&gt; f.$modulePrefix$Module)&#10;  }" description="import lazy loaded feature" toReformat="true" toShortenFQNames="true">
+    <variable name="featureName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="filePath" expression="lowercaseAndDash(featureName)" defaultValue="" alwaysStopAt="true" />
+    <variable name="modulePrefix" expression="capitalize(featureName)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_EXPRESSION" value="true" />
+      <option name="TS_EXPRESSION" value="true" />
+    </context>
+  </template>
+  <template name="a-entity-active-map-list-view" value="map($parameter$: $entityName$): ListViewItem {&#10;    return {&#10;      id: $parameter$.id,&#10;      title: $parameter$.name,&#10;      subTitle: 'სტატუსი: ' + ($parameter$.active ? 'აქტიური' : 'არააქტიური'),&#10;      active: $parameter$.active,&#10;      height: '60px',&#10;      selectable: $parameter$.active&#10;    };&#10;  }" description="generate map frunction from entity to listview" toReformat="true" toShortenFQNames="true">
+    <variable name="entityName" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="parameter" expression="camelCase(entityName)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_CLASS" value="true" />
+      <option name="TS_CLASS" value="true" />
+    </context>
+  </template>
+  <template name="a-html-list-view-items-selectable" value="&lt;ng-container *ngIf=&quot;items | async as listViewItems&quot;&gt;&#10;  &lt;div class=&quot;container flex margin-v align-center&quot;&gt;&#10;    &lt;div class=&quot;item&quot; style=&quot;min-width: 40%&quot;&gt;&#10;      &lt;ui-list-view [listViewItems]=&quot;listViewItems&quot; [activateable]=&quot;true&quot; [selectable]=&quot;true&quot; [viewDirection]=&quot;'row'&quot;&#10;                    (toggleActive)=&quot;toggleStatus($event[0], $event[1])&quot; (selected)=&quot;select($event)&quot;&gt;&lt;/ui-list-view&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/ng-container&gt;" description="list view items with selection" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="a-html-title" value="&lt;div class=&quot;container margins flex align-center&quot;&gt;&#10;  &lt;div class=&quot;h3&quot;&gt;$name$&#10;  &lt;/div&gt;&#10;&lt;/div&gt;" description="generate title" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="a-inject-change-detection-ref" value="private changeDetectionRef: ChangeDetectorRef" description="inject change detection ref" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_CLASS" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+      <option name="JS_TOP_LEVEL_STATEMENT" value="false" />
+      <option name="TS_CLASS" value="false" />
+      <option name="TS_EXPRESSION" value="false" />
+      <option name="TS_STATEMENT" value="false" />
+      <option name="TS_TOP_LEVEL_STATEMENT" value="false" />
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="a-html-list-view-items-activateable" value="&lt;ng-container *ngIf=&quot;items | async as listViewItems&quot;&gt;&#10;  &lt;div class=&quot;container flex margins align-center&quot;&gt;&#10;    &lt;div class=&quot;item&quot; style=&quot;min-width: 40%&quot;&gt;&#10;      &lt;ui-list-view [listViewItems]=&quot;listViewItems&quot; [activateable]=&quot;true&quot; [viewDirection]=&quot;'column'&quot;&#10;                    (toggleActive)=&quot;toggleStatus($event[0], $event[1])&quot;&gt;&lt;/ui-list-view&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/ng-container&gt;" description="list view items with only activation" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="a-html-subtitle" value="&lt;div class=&quot;container margins flex align-center&quot;&gt;&#10;  &lt;div class=&quot;h4&quot;&gt;$name$&#10;  &lt;/div&gt;&#10;&lt;/div&gt;" description="generate subtitle" toReformat="true" toShortenFQNames="true">
+    <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="a-inject-data-service" value="@Inject(DataBaseService) protected dataService: DataBaseGenericService&lt;$EntityName$&gt;" description="Inject dataService" toReformat="true" toShortenFQNames="true">
+    <variable name="EntityName" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_CLASS" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+      <option name="JS_TOP_LEVEL_STATEMENT" value="false" />
+      <option name="TS_CLASS" value="false" />
+      <option name="TS_EXPRESSION" value="false" />
+      <option name="TS_STATEMENT" value="false" />
+      <option name="TS_TOP_LEVEL_STATEMENT" value="false" />
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
+</templateSet>
