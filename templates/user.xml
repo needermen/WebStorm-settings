@@ -14,7 +14,7 @@
       <option name="TypeScript" value="true" />
     </context>
   </template>
-  <template name="a-module-feature-routing" value="const externalModules = [];&#10;const internalUIModules = [];&#10;const internalModules = [];&#10;const components = [$name$Component]&#10;&#10;@NgModule({&#10;  declarations: [&#10;    ...components&#10;  ],&#10;  imports: [&#10;    SharedModule,&#10;    $name$RoutingModule,&#10;&#10;    ...internalModules,&#10;    ...internalUIModules,&#10;    ...externalModules&#10;  ],&#10;  providers: []&#10;})&#10;export class $name$Module {&#10;}" description="angular feature module with routing" toReformat="true" toShortenFQNames="true">
+  <template name="a-module-feature-routing" value="const externalModules = [];&#10;const internalUIModules = [];&#10;const internalModules = [];&#10;const components = [$name$ListComponent]&#10;&#10;@NgModule({&#10;  declarations: [&#10;    ...components&#10;  ],&#10;  imports: [&#10;    SharedModule,&#10;    $name$RoutingModule,&#10;&#10;    ...internalModules,&#10;    ...internalUIModules,&#10;    ...externalModules&#10;  ],&#10;  providers: []&#10;})&#10;export class $name$sModule {&#10;}" description="angular feature module with routing" toReformat="true" toShortenFQNames="true">
     <variable name="name" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="JS_STATEMENT" value="true" />
@@ -100,6 +100,38 @@
       <option name="TS_STATEMENT" value="false" />
       <option name="TS_TOP_LEVEL_STATEMENT" value="false" />
       <option name="TypeScript" value="true" />
+    </context>
+  </template>
+  <template name="a-service-mapper" value="import { Injectable } from '@angular/core';&#10;import { ListViewItem } from '@libs/components';&#10;&#10;import { DomainToListViewMapperService } from '@admin/shared';&#10;&#10;import { $Name$ } from '../entity/$dashName$';&#10;&#10;@Injectable()&#10;export class $Name$sMapperService extends DomainToListViewMapperService&lt;$Name$&gt; {&#10;  map($camelCaseName$: $Name$): ListViewItem {&#10;    return { ...super.map($camelCaseName$), selectable: $camelCaseName$.isActive, subTitle: '' };&#10;  }&#10;}" description="add mapper service" toReformat="true" toShortenFQNames="true">
+    <variable name="Name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="dashName" expression="lowercaseAndDash(Name)" defaultValue="" alwaysStopAt="false" />
+    <variable name="camelCaseName" expression="camelCase(Name)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+      <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+      <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="a-routing-module" value="import { NgModule } from '@angular/core';&#10;import { Routes, RouterModule } from '@angular/router';&#10;&#10;import { $NAME$ListComponent } from './list/$dashlowerNAME$-list.component';&#10;&#10;const routes: Routes = [&#10;  {&#10;    path: '',&#10;    pathMatch: 'full',&#10;    component: $NAME$ListComponent&#10;  }&#10;];&#10;&#10;@NgModule({&#10;  imports: [RouterModule.forChild(routes)],&#10;  exports: [RouterModule]&#10;})&#10;export class $NAME$sRoutingModule { }" description="create routing module" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="dashlowerNAME" expression="lowercaseAndDash(NAME)" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+      <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+      <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="a-component-list" value="import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';&#10;&#10;import { ListViewItem } from '@libs/components';&#10;import { AnimationsService } from '@libs/animations';&#10;import { OnPageSearchService } from '@libs/layout';&#10;&#10;import { Component$Type$ } from '@admin/shared';&#10;&#10;import { $Name$ } from './entity/$dashLowerName$';&#10;import { $Name$HttpFacade } from './services/$dashLowerName$-http-facade.service';&#10;import { $Name$MapperService } from './services/$dashLowerName$-mapper.service';&#10;&#10;@Component({&#10;  selector: 'sub-$dashLowerName$s',&#10;  templateUrl: './$dashLowerName$s.component.html',&#10;  styleUrls: ['./$dashLowerName$s.component.css'],&#10;  changeDetection: ChangeDetectionStrategy.OnPush&#10;})&#10;export class $Name$sComponentList extends Component$Type$&lt;$Name$, ListViewItem&gt; implements OnInit, AfterViewInit, OnDestroy {&#10;  constructor(protected facade: $Name$HttpFacade,&#10;              protected mapper: $Name$MapperService,&#10;              protected animationsService: AnimationsService,&#10;              protected onPageSearchService: OnPageSearchService,&#10;              protected changeDetectionRef: ChangeDetectorRef) {&#10;    super(facade, mapper, animationsService, onPageSearchService, changeDetectionRef);&#10;  }&#10;&#10;}" description="add component list (types: Queryable, Activateable, Selectable, Crudable)" toReformat="true" toShortenFQNames="true">
+    <variable name="Name" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="dashLowerName" expression="lowercaseAndDash(Name)" defaultValue="" alwaysStopAt="false" />
+    <variable name="Type" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_STATEMENT" value="true" />
+      <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+      <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
     </context>
   </template>
 </templateSet>
