@@ -1,1 +1,1 @@
-# webshtor-settings
+# WebStorm-settings
