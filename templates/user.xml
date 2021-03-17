@@ -102,7 +102,7 @@
       <option name="TypeScript" value="true" />
     </context>
   </template>
-  <template name="a-service-mapper" value="import { Injectable } from '@angular/core';&#10;import { ListViewItem } from '@libs/components';&#10;&#10;import { DomainToListViewMapperService } from '@admin/shared';&#10;&#10;import { $Name$ } from '../entity/$dashName$';&#10;&#10;@Injectable()&#10;export class $Name$sMapperService extends DomainToListViewMapperService&lt;$Name$&gt; {&#10;  map($camelCaseName$: $Name$): ListViewItem {&#10;    return { ...super.map($camelCaseName$), selectable: $camelCaseName$.isActive, subTitle: '' };&#10;  }&#10;}" description="add mapper service" toReformat="true" toShortenFQNames="true">
+  <template name="a-service-mapper" value="import { Injectable } from '@angular/core';&#10;import { ListViewItem } from '@libs/components';&#10;&#10;import { DomainToListViewMapperService } from '@admin/shared';&#10;&#10;import { $Name$ } from '../entity/$dashName$';&#10;&#10;@Injectable()&#10;export class $Name$MapperService extends DomainToListViewMapperService&lt;$Name$&gt; {&#10;  map($camelCaseName$: $Name$): ListViewItem {&#10;    return { ...super.map($camelCaseName$), selectable: $camelCaseName$.isActive, subTitle: '' };&#10;  }&#10;}" description="add mapper service" toReformat="true" toShortenFQNames="true">
     <variable name="Name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="dashName" expression="lowercaseAndDash(Name)" defaultValue="" alwaysStopAt="false" />
     <variable name="camelCaseName" expression="camelCase(Name)" defaultValue="" alwaysStopAt="false" />
