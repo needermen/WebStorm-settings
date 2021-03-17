@@ -32,7 +32,7 @@
       <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="a-routing-import-lazy" value="{&#10;    path: $featureName$MainRoute,&#10;    loadChildren: () =&gt;&#10;      import('./accounts/$filePath$.module').then((f) =&gt; f.$modulePrefix$Module)&#10;  }" description="import lazy loaded feature" toReformat="true" toShortenFQNames="true">
+  <template name="a-routing-import-lazy" value="{&#10;    path: $featureName$MainRoute,&#10;    loadChildren: () =&gt;&#10;      import('./$filePath$.module').then((f) =&gt; f.$modulePrefix$Module)&#10;  }" description="import lazy loaded feature" toReformat="true" toShortenFQNames="true">
     <variable name="featureName" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="filePath" expression="lowercaseAndDash(featureName)" defaultValue="" alwaysStopAt="true" />
     <variable name="modulePrefix" expression="capitalize(featureName)" defaultValue="" alwaysStopAt="true" />
@@ -47,11 +47,6 @@
     <context>
       <option name="JS_CLASS" value="true" />
       <option name="TS_CLASS" value="true" />
-    </context>
-  </template>
-  <template name="a-html-list-view-items-selectable" value="&lt;ng-container *ngIf=&quot;items | async as listViewItems&quot;&gt;&#10;  &lt;div class=&quot;container flex margin-v align-center&quot;&gt;&#10;    &lt;div class=&quot;item&quot; style=&quot;min-width: 40%&quot;&gt;&#10;      &lt;ui-list-view [listViewItems]=&quot;listViewItems&quot; [activateable]=&quot;true&quot; [selectable]=&quot;true&quot; [viewDirection]=&quot;'row'&quot;&#10;                    (toggleActive)=&quot;toggleStatus($event[0], $event[1])&quot; (selected)=&quot;select($event)&quot;&gt;&lt;/ui-list-view&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/ng-container&gt;" description="list view items with selection" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="HTML_TEXT" value="true" />
     </context>
   </template>
   <template name="a-html-title" value="&lt;div class=&quot;container margins flex align-center&quot;&gt;&#10;  &lt;div class=&quot;h3&quot;&gt;$name$&#10;  &lt;/div&gt;&#10;&lt;/div&gt;" description="generate title" toReformat="true" toShortenFQNames="true">
@@ -73,11 +68,6 @@
       <option name="TS_STATEMENT" value="false" />
       <option name="TS_TOP_LEVEL_STATEMENT" value="false" />
       <option name="TypeScript" value="true" />
-    </context>
-  </template>
-  <template name="a-html-list-view-items-activateable" value="&lt;ng-container *ngIf=&quot;items | async as listViewItems&quot;&gt;&#10;  &lt;div class=&quot;container flex margins align-center&quot;&gt;&#10;    &lt;div class=&quot;item&quot; style=&quot;min-width: 40%&quot;&gt;&#10;      &lt;ui-list-view [listViewItems]=&quot;listViewItems&quot; [activateable]=&quot;true&quot; [viewDirection]=&quot;'column'&quot;&#10;                    (toggleActive)=&quot;toggleStatus($event[0], $event[1])&quot;&gt;&lt;/ui-list-view&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/ng-container&gt;" description="list view items with only activation" toReformat="true" toShortenFQNames="true">
-    <context>
-      <option name="HTML_TEXT" value="true" />
     </context>
   </template>
   <template name="a-html-subtitle" value="&lt;div class=&quot;container margins flex align-center&quot;&gt;&#10;  &lt;div class=&quot;h4&quot;&gt;$name$&#10;  &lt;/div&gt;&#10;&lt;/div&gt;" description="generate subtitle" toReformat="true" toShortenFQNames="true">
@@ -123,7 +113,7 @@
       <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="a-component-list" value="import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';&#10;&#10;import { ListViewItem } from '@libs/components';&#10;import { AnimationsService } from '@libs/animations';&#10;import { OnPageSearchService } from '@libs/layout';&#10;&#10;import { Component$Type$ } from '@admin/shared';&#10;&#10;import { $Name$ } from './entity/$dashLowerName$';&#10;import { $Name$HttpFacade } from './services/$dashLowerName$-http-facade.service';&#10;import { $Name$MapperService } from './services/$dashLowerName$-mapper.service';&#10;&#10;@Component({&#10;  selector: 'sub-$dashLowerName$s',&#10;  templateUrl: './$dashLowerName$s.component.html',&#10;  styleUrls: ['./$dashLowerName$s.component.css'],&#10;  changeDetection: ChangeDetectionStrategy.OnPush&#10;})&#10;export class $Name$sComponentList extends Component$Type$&lt;$Name$, ListViewItem&gt; implements OnInit, AfterViewInit, OnDestroy {&#10;  constructor(protected facade: $Name$HttpFacade,&#10;              protected mapper: $Name$MapperService,&#10;              protected animationsService: AnimationsService,&#10;              protected onPageSearchService: OnPageSearchService,&#10;              protected changeDetectionRef: ChangeDetectorRef) {&#10;    super(facade, mapper, animationsService, onPageSearchService, changeDetectionRef);&#10;  }&#10;&#10;}" description="add component list (types: Queryable, Activateable, Selectable, Crudable)" toReformat="true" toShortenFQNames="true">
+  <template name="a-component-list" value="import { AfterViewInit, ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';&#10;&#10;import { ListViewItem } from '@libs/components';&#10;import { AnimationsService } from '@libs/animations';&#10;import { OnPageSearchService } from '@libs/layout';&#10;&#10;import { Component$Type$ } from '@admin/shared';&#10;&#10;import { $Name$ } from './entity/$dashLowerName$';&#10;import { $Name$Facade } from './services/$dashLowerName$-facade.service';&#10;import { $Name$MapperService } from './services/$dashLowerName$-mapper.service';&#10;&#10;@Component({&#10;  selector: 'sub-$dashLowerName$-list',&#10;  templateUrl: './$dashLowerName$-list.component.html',&#10;  styleUrls: ['./$dashLowerName$-list.component.css'],&#10;  changeDetection: ChangeDetectionStrategy.OnPush&#10;})&#10;export class $Name$ListComponent extends Component$Type$&lt;$Name$, ListViewItem&gt; implements OnInit, AfterViewInit, OnDestroy {&#10;  constructor(protected facade: $Name$Facade,&#10;              protected mapper: $Name$MapperService,&#10;              protected animationsService: AnimationsService,&#10;              protected onPageSearchService: OnPageSearchService,&#10;              protected changeDetectionRef: ChangeDetectorRef) {&#10;    super(facade, mapper, animationsService, onPageSearchService, changeDetectionRef);&#10;  }&#10;&#10;}" description="add component list (types: Queryable, Activateable, Selectable, Crudable)" toReformat="true" toShortenFQNames="true">
     <variable name="Name" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="dashLowerName" expression="lowercaseAndDash(Name)" defaultValue="" alwaysStopAt="false" />
     <variable name="Type" expression="" defaultValue="" alwaysStopAt="true" />
@@ -152,6 +142,18 @@
       <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
       <option name="TS_STATEMENT" value="true" />
       <option name="TS_TOP_LEVEL_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="a-html-list-crudable" value="&lt;div class=&quot;container flex margin-v align-center&quot;&gt;&#10;  &lt;div class=&quot;h4&quot;&gt;$title$&#10;  &lt;/div&gt;&#10;&lt;/div&gt;&#10;&#10;&lt;ng-container *ngIf=&quot;selectableItems$ | async as listViewItems&quot;&gt;&#10;  &lt;div class=&quot;container flex margin-v align-center&quot;&gt;&#10;    &lt;div class=&quot;item&quot; style=&quot;min-width: 40%&quot;&gt;&#10;      &lt;ui-list-view [listViewItems]=&quot;listViewItems&quot; [selectable]=&quot;true&quot; [activateable]=&quot;true&quot; [viewDirection]=&quot;'row'&quot;&#10;                    (selected)=&quot;select($event)&quot; (toggleActive)=&quot;updateStatus($event[0], $event[1])&quot;&gt;&lt;/ui-list-view&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/ng-container&gt;&#10;&#10;&lt;ng-container *ngIf=&quot;showForm$ | async as showForm&quot;&gt;&#10;&#10;  &lt;div style=&quot;margin-left: 2px; width: 41%&quot; class=&quot;container margin-v&quot; *ngIf=&quot;showForm.display&quot;&gt;&#10;    &lt;ui-form-dynamic-form [controls]=&quot;controls&quot; [value]=&quot;showForm.selected&quot;  (cancelled)=&quot;close()&quot;&#10;                          (submitted)=&quot;create($event)&quot;&gt;&lt;/ui-form-dynamic-form&gt;&#10;  &lt;/div&gt;&#10;&#10;&lt;/ng-container&gt;" description="create crudable list template" toReformat="true" toShortenFQNames="true">
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="a-html-list-activateable" value="&lt;div class=&quot;container margin-v flex align-center&quot;&gt;&#10;  &lt;div class=&quot;h3&quot;&gt;$title$&#10;  &lt;/div&gt;&#10;&lt;/div&gt;&#10;&#10;&lt;ng-container *ngIf=&quot;items$ | async as listViewItems&quot;&gt;&#10;  &lt;div class=&quot;container flex margin-v align-center&quot;&gt;&#10;    &lt;div class=&quot;item&quot; style=&quot;width: 40%&quot;&gt;&#10;      &lt;ui-list-view [listViewItems]=&quot;listViewItems&quot; [activateable]=&quot;true&quot; [viewDirection]=&quot;'column'&quot;&#10;                    (toggleActive)=&quot;updateStatus($event[0], $event[1])&quot;&gt;&lt;/ui-list-view&gt;&#10;    &lt;/div&gt;&#10;  &lt;/div&gt;&#10;&lt;/ng-container&gt;" description="create activateable list template" toReformat="true" toShortenFQNames="true">
+    <variable name="title" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML_TEXT" value="true" />
     </context>
   </template>
 </templateSet>

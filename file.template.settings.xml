@@ -2,15 +2,16 @@
   <component name="ExportableFileTemplateSettings">
     <default_templates>
       <template name="Angular Feature Module.ts" file-name="${NAME}.module.ts" reformat="true" live-template-enabled="true">
-        <template name="Angular Feature Module.ts.child.8.ts" file-name="services/${NAME}-http-service.ts" reformat="true" live-template-enabled="true" />
-        <template name="Angular Feature Module.ts.child.7.ts" file-name="services/${NAME}-mapper.service.ts" reformat="true" live-template-enabled="true" />
-        <template name="Angular Feature Module.ts.child.6.ts" file-name="services/${NAME}-facade.service.ts" reformat="true" live-template-enabled="true" />
-        <template name="Angular Feature Module.ts.child.5.scss" file-name="list/${NAME}-list.component.scss" reformat="true" live-template-enabled="false" />
+        <template name="Angular Feature Module.ts.child.9.ts" file-name="index.ts" reformat="true" live-template-enabled="true" />
         <template name="Angular Feature Module.ts.child.0.html" file-name="list/${NAME}-list.component" reformat="true" live-template-enabled="true" />
         <template name="Angular Feature Module.ts.child.1.ts" file-name="list/${NAME}-list.component" reformat="true" live-template-enabled="true" />
         <template name="Angular Feature Module.ts.child.2.ts" file-name="entity/${NAME}" reformat="true" live-template-enabled="true" />
         <template name="Angular Feature Module.ts.child.3.ts" file-name="routes-exported" reformat="true" live-template-enabled="true" />
         <template name="Angular Feature Module.ts.child.4.ts" file-name="${NAME}-routing.module" reformat="true" live-template-enabled="true" />
+        <template name="Angular Feature Module.ts.child.5.scss" file-name="list/${NAME}-list.component.scss" reformat="true" live-template-enabled="false" />
+        <template name="Angular Feature Module.ts.child.6.ts" file-name="services/${NAME}-facade.service.ts" reformat="true" live-template-enabled="true" />
+        <template name="Angular Feature Module.ts.child.7.ts" file-name="services/${NAME}-mapper.service.ts" reformat="true" live-template-enabled="true" />
+        <template name="Angular Feature Module.ts.child.8.ts" file-name="services/${NAME}-http-service.ts" reformat="true" live-template-enabled="true" />
       </template>
       <template name="Angular Feature Module.ts.child.0.html" file-name="list/${NAME}-list.component" reformat="true" live-template-enabled="true" />
       <template name="Angular Feature Module.ts.child.1.ts" file-name="list/${NAME}-list.component" reformat="true" live-template-enabled="true" />
@@ -21,6 +22,7 @@
       <template name="Angular Feature Module.ts.child.6.ts" file-name="services/${NAME}-facade.service.ts" reformat="true" live-template-enabled="true" />
       <template name="Angular Feature Module.ts.child.7.ts" file-name="services/${NAME}-mapper.service.ts" reformat="true" live-template-enabled="true" />
       <template name="Angular Feature Module.ts.child.8.ts" file-name="services/${NAME}-http-service.ts" reformat="true" live-template-enabled="true" />
+      <template name="Angular Feature Module.ts.child.9.ts" file-name="index.ts" reformat="true" live-template-enabled="true" />
     </default_templates>
   </component>
 </application>
