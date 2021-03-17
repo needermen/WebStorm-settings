@@ -105,7 +105,7 @@
   </template>
   <template name="a-routing-module-list" value="import { NgModule } from '@angular/core';&#10;import { Routes, RouterModule } from '@angular/router';&#10;&#10;import { $NAME$ListComponent } from './list/$dashlowerNAME$-list.component';&#10;&#10;const routes: Routes = [&#10;  {&#10;    path: '',&#10;    pathMatch: 'full',&#10;    component: $NAME$ListComponent&#10;  }&#10;];&#10;&#10;@NgModule({&#10;  imports: [RouterModule.forChild(routes)],&#10;  exports: [RouterModule]&#10;})&#10;export class $NAME$RoutingModule { }" description="create routing module for list" toReformat="true" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="dashlowerNAME" expression="lowercaseAndDash(NAME)" defaultValue="" alwaysStopAt="true" />
+    <variable name="dashlowerNAME" expression="lowercaseAndDash(NAME)" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="JS_STATEMENT" value="true" />
       <option name="JS_TOP_LEVEL_STATEMENT" value="true" />
