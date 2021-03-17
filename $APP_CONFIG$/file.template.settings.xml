@@ -1,7 +1,0 @@
-<application>
-  <component name="ExportableFileTemplateSettings">
-    <default_templates>
-      <template name="feature module.ts" file-name="${NAME}.module.ts" reformat="true" live-template-enabled="false" />
-    </default_templates>
-  </component>
-</application>
