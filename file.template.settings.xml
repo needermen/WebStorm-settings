@@ -1,7 +1,12 @@
 <application>
   <component name="ExportableFileTemplateSettings">
     <default_templates>
-      <template name="feature module.ts" file-name="${NAME}.module.ts" reformat="true" live-template-enabled="false" />
+      <template name="feature.ts" file-name="${NAME}.module.ts" reformat="true" live-template-enabled="true">
+        <template name="feature.ts.child.0.ts" file-name="routes-exported" reformat="true" live-template-enabled="false" />
+        <template name="feature.ts.child.1.ts" file-name="${NAME}-routing.module" reformat="true" live-template-enabled="true" />
+      </template>
+      <template name="feature.ts.child.0.ts" file-name="routes-exported" reformat="true" live-template-enabled="false" />
+      <template name="feature.ts.child.1.ts" file-name="${NAME}-routing.module" reformat="true" live-template-enabled="true" />
     </default_templates>
   </component>
 </application>
