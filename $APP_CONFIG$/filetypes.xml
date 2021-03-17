@@ -1,0 +1,7 @@
+<application>
+  <component name="FileTypeManager" version="18">
+    <extensionMap>
+      <mapping pattern="view-entity-description" type="AUTO_DETECTED" />
+    </extensionMap>
+  </component>
+</application>
