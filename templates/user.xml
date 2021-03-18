@@ -156,4 +156,11 @@
       <option name="HTML_TEXT" value="true" />
     </context>
   </template>
+  <template name="a-form-controls" value="controls: ControlBase&lt;$NAME$&gt; [] = [&#10;    new TextBoxControl&lt;$NAME$&gt;({&#10;      key: 'nameGeo',&#10;      label: 'სახელი',&#10;      value: '',&#10;      required: true,&#10;      order: 1&#10;    })&#10;  ];" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JS_CLASS" value="true" />
+      <option name="TS_CLASS" value="true" />
+    </context>
+  </template>
 </templateSet>
