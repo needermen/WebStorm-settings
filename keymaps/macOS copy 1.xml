@@ -1,7 +1,12 @@
 <keymap version="1" name="macOS copy 1" parent="Mac OS X 10.5+">
   <action id="AddToFavoritesPopup" />
+  <action id="ChangesView.ShelveSilently" />
+  <action id="FileChooser.TogglePathShowing" />
   <action id="Github.PullRequest.Comments.Reload" />
   <action id="Github.PullRequest.Details.Reload" />
+  <action id="MethodHierarchy" />
+  <action id="MethodHierarchy.BaseOnThisMethod" />
+  <action id="ParameterInfo" />
   <action id="ReformatCode">
     <keyboard-shortcut first-keystroke="meta alt l" />
     <keyboard-shortcut first-keystroke="shift alt f" />
@@ -9,10 +14,19 @@
   <action id="Refresh" />
   <action id="RenameElement">
     <keyboard-shortcut first-keystroke="shift f6" />
-    <keyboard-shortcut first-keystroke="meta r" second-keystroke="meta r" />
+    <keyboard-shortcut first-keystroke="meta r" />
   </action>
-  <action id="Replace" />
+  <action id="Replace">
+    <keyboard-shortcut first-keystroke="meta h" />
+    <keyboard-shortcut first-keystroke="meta p" />
+  </action>
+  <action id="ReplaceInPath">
+    <keyboard-shortcut first-keystroke="shift meta r" />
+    <keyboard-shortcut first-keystroke="shift meta h" />
+    <keyboard-shortcut first-keystroke="shift meta p" />
+  </action>
   <action id="Rerun" />
   <action id="Svn.RefreshWorkingCopies" />
   <action id="Vcs.Log.Refresh" />
+  <action id="org.intellij.plugins.markdown.ui.actions.editorLayout.CyclicSplitLayoutChangeAction" />
 </keymap>
