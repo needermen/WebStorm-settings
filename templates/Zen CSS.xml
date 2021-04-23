@@ -2,7 +2,4 @@
   <template name="t" value="top: $END$;" description="top:...;" toReformat="true" toShortenFQNames="true">
     <context />
   </template>
-  <template name="to" value="text-outline: $END$;" description="text-outline:...;" toReformat="true" toShortenFQNames="true">
-    <context />
-  </template>
 </templateSet>
