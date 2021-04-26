@@ -1,7 +1,4 @@
 <templateSet group="Zen HTML">
-  <template name="br" value="&lt;br&gt;" description="&lt;br&gt;" toReformat="true" toShortenFQNames="true">
-    <context />
-  </template>
   <template name="hr" value="&lt;hr&gt;" description="&lt;hr&gt;" toReformat="true" toShortenFQNames="true">
     <context />
   </template>
