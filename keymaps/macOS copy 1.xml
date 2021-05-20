@@ -1,6 +1,9 @@
 <keymap version="1" name="macOS copy 1" parent="Mac OS X 10.5+">
   <action id="AddToFavoritesPopup" />
   <action id="ChangesView.ShelveSilently" />
+  <action id="CloseAllEditorsButActive">
+    <keyboard-shortcut first-keystroke="shift meta w" />
+  </action>
   <action id="FileChooser.TogglePathShowing" />
   <action id="Github.PullRequest.Comments.Reload" />
   <action id="Github.PullRequest.Details.Reload" />
@@ -29,4 +32,5 @@
   <action id="Svn.RefreshWorkingCopies" />
   <action id="Vcs.Log.Refresh" />
   <action id="org.intellij.plugins.markdown.ui.actions.editorLayout.CyclicSplitLayoutChangeAction" />
+  <action id="tasks.close" />
 </keymap>
