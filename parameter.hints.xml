@@ -1,0 +1,9 @@
+<application>
+  <component name="ParameterNameHintsSettings">
+    <blacklists>
+      <blacklist language="TypeScript">
+        <added pattern="generateFiles(tree,srcFolder,target,substitutions)" />
+      </blacklist>
+    </blacklists>
+  </component>
+</application>
