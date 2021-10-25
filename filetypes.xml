@@ -5,6 +5,7 @@
       <mapping pattern="bundle-product-group-restriction" type="AUTO_DETECTED" />
       <mapping pattern="bundle-product-list-view" type="AUTO_DETECTED" />
       <mapping ext="ys" type="TypeScript" />
+      <removed_mapping ext="ignore" approved="true" type="IgnoreLang file" />
     </extensionMap>
   </component>
 </application>
