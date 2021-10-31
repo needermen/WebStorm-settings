@@ -4,7 +4,6 @@
       <mapping pattern="view-entity-description" type="AUTO_DETECTED" />
       <mapping pattern="bundle-product-group-restriction" type="AUTO_DETECTED" />
       <mapping pattern="bundle-product-list-view" type="AUTO_DETECTED" />
-      <mapping pattern=".prettierrc" type="JSON" />
       <mapping ext="ys" type="TypeScript" />
       <removed_mapping ext="ignore" approved="true" type="IgnoreLang file" />
       <removed_mapping pattern=".prettierrc" approved="true" type="JSON" />
