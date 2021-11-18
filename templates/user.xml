@@ -169,7 +169,7 @@
       <option name="HTML_TEXT" value="true" />
     </context>
   </template>
-  <template name="a-pipe-console-log-subscribe" value=".pipe(tap(console.log)).subscribe()" toReformat="true" toShortenFQNames="true">
+  <template name="a-pipe-console-log-subscribe" value=".pipe(tap(console.log)).subscribe()" description="" toReformat="true" toShortenFQNames="true">
     <context>
       <option name="JAVA_SCRIPT" value="true" />
       <option name="JSX_HTML" value="false" />
@@ -184,7 +184,7 @@
       <option name="TypeScript" value="true" />
     </context>
   </template>
-  <template name="a-class-data-cy" value="class=&quot;$Type$&quot; data-cy=&quot;$Type$&quot;" toReformat="true" toShortenFQNames="true">
+  <template name="a-class-data-cy" value="class=&quot;$Type$&quot; data-cy=&quot;$Type$&quot;" description="" toReformat="true" toShortenFQNames="true">
     <variable name="Type" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="HTML" value="true" />
