@@ -169,4 +169,19 @@
       <option name="HTML_TEXT" value="true" />
     </context>
   </template>
+  <template name="a-pipe-console-log-subscribe" value=".pipe(tap(console.log)).subscribe()" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+      <option name="JSX_HTML" value="false" />
+      <option name="JS_CLASS" value="false" />
+      <option name="JS_EXPRESSION" value="false" />
+      <option name="JS_STATEMENT" value="false" />
+      <option name="JS_TOP_LEVEL_STATEMENT" value="false" />
+      <option name="TS_CLASS" value="false" />
+      <option name="TS_EXPRESSION" value="false" />
+      <option name="TS_STATEMENT" value="false" />
+      <option name="TS_TOP_LEVEL_STATEMENT" value="false" />
+      <option name="TypeScript" value="true" />
+    </context>
+  </template>
 </templateSet>
