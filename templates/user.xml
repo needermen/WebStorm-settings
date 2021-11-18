@@ -184,4 +184,11 @@
       <option name="TypeScript" value="true" />
     </context>
   </template>
+  <template name="a-class-data-cy" value="class=&quot;$Type$&quot; data-cy=&quot;$Type$&quot;" toReformat="true" toShortenFQNames="true">
+    <variable name="Type" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="HTML_TEXT" value="false" />
+    </context>
+  </template>
 </templateSet>
