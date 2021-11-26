@@ -1,7 +1,4 @@
 <templateSet group="Zen CSS">
-  <template name="!" value="!important" description="!important" toReformat="true" toShortenFQNames="true">
-    <context />
-  </template>
   <template name="w" value="width: $END$;" description="width:...;" toReformat="true" toShortenFQNames="true">
     <context />
   </template>
