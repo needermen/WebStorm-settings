@@ -1,5 +1,5 @@
 <templateSet group="Zen CSS">
-  <template name="t" value="top: $END$;" description="top:...;" toReformat="true" toShortenFQNames="true">
+  <template name="w" value="width: $END$;" description="width:...;" toReformat="true" toShortenFQNames="true">
     <context />
   </template>
 </templateSet>
