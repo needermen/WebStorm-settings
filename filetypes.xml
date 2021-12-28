@@ -5,6 +5,7 @@
       <mapping pattern="environment-config" type="AUTO_DETECTED" />
       <mapping pattern="bundle-product-group-restriction" type="AUTO_DETECTED" />
       <mapping pattern="bundle-product-list-view" type="AUTO_DETECTED" />
+      <mapping pattern="user-pmdata" type="AUTO_DETECTED" />
       <mapping pattern="data-cy" type="AUTO_DETECTED" />
       <mapping pattern="pre-push" type="Native" />
       <mapping ext="ys" type="TypeScript" />
