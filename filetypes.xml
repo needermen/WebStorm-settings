@@ -4,6 +4,7 @@
       <mapping pattern="view-entity-description" type="AUTO_DETECTED" />
       <mapping pattern="environment-config" type="AUTO_DETECTED" />
       <mapping pattern="bundle-product-group-restriction" type="AUTO_DETECTED" />
+      <mapping pattern="animations" type="AUTO_DETECTED" />
       <mapping pattern="bundle-product-list-view" type="AUTO_DETECTED" />
       <mapping pattern="user-pmdata" type="AUTO_DETECTED" />
       <mapping pattern="data-cy" type="AUTO_DETECTED" />
