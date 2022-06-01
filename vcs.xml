@@ -38,6 +38,10 @@
           <option name="url" value="https://gitlab.crocobet.com/front-end-gurus/crocobet-mobile.git" />
           <option name="userName" value="" />
         </UrlAndUserName>
+        <UrlAndUserName>
+          <option name="url" value="https://tschikovani@bitbucket.org/crocobetfront/handle.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
       </list>
     </option>
     <option name="cloneParentDir" value="$USER_HOME$/Documents/Projects" />
