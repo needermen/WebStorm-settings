@@ -16,8 +16,8 @@
     <mask>*.js</mask>
     <mask>*-routing.module.ts</mask>
     <mask>.scss</mask>
-    <mask>*.scss</mask>
     <mask>*.ts</mask>
     <mask>*.html</mask>
+    <mask>*.scss</mask>
   </component>
 </application>
